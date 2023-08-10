@@ -1,0 +1,1 @@
+import GroupLogo from "./GroupLogo";

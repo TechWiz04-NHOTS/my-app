@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Readex Pro', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.border-bottom{
+    border-bottom: 3px solid linear-gradient(90deg,#cd122d 0,#154284) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background{
+    background-color: linear-gradient(90deg,#cd122d 0,#154284);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: "" !important;
 }
 
-.App-link {
-  color: #61dafb;
+.background-top img{
+    width: 100%;
+}
+.divide{
+    background: linear-gradient(180deg,#081f1f 0,#2548ab 45%,#1f4c75 46%,#2c5288 49%,#191831);
+    /* height: 400px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background-result{
+    background: linear-gradient(230deg,rgba(24,23,53,.9),rgba(154,0,11,.9));
+}
+
+.text-background{
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.background-player{
+    background: linear-gradient(247deg,#154284,#181733);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+    margin: 4px;
+}
+
+.grid-item:hover p{
+    color: #fff;
+}
+
+.grid-item:hover{
+    background: linear-gradient(247deg,#181733, #154284);
+    transition: ease-in-out 0.25s;
+}
+
+.z-99{
+    z-index: 99 !important;
+}
+
+.background-products{
+    background: url("../public/image/stadium.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
