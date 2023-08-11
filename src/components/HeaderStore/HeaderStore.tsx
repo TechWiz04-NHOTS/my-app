@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { BsCartFill } from "react-icons/bs";
 
-export default function HeaderStore(){
+export default function HeaderStore({searchString, setSearchString}: any){
+
     const goToCart = () => {
         window.location.href = '/cart';
     }
@@ -45,7 +47,7 @@ export default function HeaderStore(){
                     <p className="text-[36px] font-bold tracking-tighter">CHELSEA DIRECT</p>
                 </div>
                 <div className="relative flex items-center">
-                    <input className="pl-[14px] w-[500px] outline-none border font-thin py-[8px] text-[14px]" placeholder="Search" />
+                    <input onChange={(e) => {setSearchString(e.target.value)}} className="pl-[14px] w-[500px] outline-none border font-thin py-[8px] text-[14px]" placeholder="Search" />
                     <i className="fa-solid fa-magnifying-glass fa-xl absolute text-[#505050] left-[95%] text-[14px]"></i>
                 </div>
             </div>
