@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      // dots: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,

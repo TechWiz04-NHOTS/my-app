@@ -17,8 +17,8 @@ export default function MatchInfo(){
                 <i className="fa-solid fa-arrow-right ml-[6px]"></i>
             </div>
             <div className="flex gap-[32px] flex-row items-center justify-center py-[26px] text-white font-[700]">
-                <button className="py-[8px] px-[1.6rem] bg-[linear-gradient(90deg,#081f1f,#2548ab)] text-[12px]">CHELSEA TV+</button>
-                <button className="py-[8px] px-[12px] bg-[linear-gradient(270deg,#154284,#cd122d)] text-[12px]">FULL MATCH REPORT</button>
+                <button className="py-[8px] px-[1.6rem] bg-[linear-gradient(90deg,#081f1f,#2548ab)] text-[12px] hover:bg-[linear-gradient(90deg,#2548ab,#081f1f)]">CHELSEA TV+</button>
+                <button className="py-[8px] px-[12px] bg-[linear-gradient(270deg,#154284,#cd122d)] text-[12px] hover:bg-[linear-gradient(270deg,#cd122d,#154284)]">FULL MATCH REPORT</button>
             </div>
         </div>
     )

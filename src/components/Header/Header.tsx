@@ -1,4 +1,80 @@
+import { Button, Dropdown, MenuProps } from "antd"
+import { FaCircleUser } from "react-icons/fa6";
+
 export default function Header(){
+
+    const handleLogout = () =>{
+        localStorage.removeItem("ACCESS_TOKEN")
+        if(localStorage.getItem("ACCESS_TOKEN") == null){
+            window.location.href='/prelog';
+        }
+    }
+
+    // const goToStore = () => {
+    //     window.location.href='/'
+    // }
+
+    const items: MenuProps['items'] = [
+        {
+            key: '1',
+            label: (
+              <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                Profile
+              </a>
+            ),
+          },
+          {
+            key: '2',
+            label: (
+              <a target="_blank" rel="noopener noreferrer" href="/store">
+                Go to store
+              </a>
+            ),
+          },
+          {
+            key: '3',
+            label: (
+              <a onClick={handleLogout} target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+                Log out
+              </a>
+            ),
+          },
+        ];
+
+    const DropdownItem: React.FC = () => (
+        <>
+            <Dropdown menu={{ items }} placement="bottomRight" arrow>
+                <Button className="text-white flex items-center border-none gap-[12px]">
+                    <FaCircleUser className="w-[30px] h-[30px] text-[#fdc52c]" />
+                    <p className="text-[14px] font-bold hover:border-b">My account</p>
+                </Button>
+            </Dropdown>
+        </>
+    )
+
+    const BeforeLog = () => {
+        if(localStorage.getItem("ACCESS_TOKEN") == null){
+            return(
+                <div className="flex items-center gap-[16px]">
+                    <div className="flex items-center">
+                            <button className="rounded-full bg-[#154284] mr-[6px]">
+                                <i className="fa-regular fa-user p-[11px] text-white"></i>
+                            </button>
+                            <p className="text-white text-[14px]"><strong><a href="/prelog">Login</a></strong></p>
+                        </div>
+                        <button className="flex items-center px-[8px] mr-[10px] bg-[linear-gradient(90deg,#8c1a17,#cd122d)] text-white p-[4px] my-[4px] rounded-sm">
+                            <img className="pr-[6px]" src="./image/sublogo.png" width="40px"  alt="subLogo"/>
+                            <p className="pr-[8px] text-[14px]"><strong>Register</strong></p>
+                        </button>
+                </div>
+            )
+        } else{
+            return(
+                <DropdownItem />
+            )
+        }
+    }
+
     return(
         <div className="divide sticky top-0 z-99">
         <div className="container">
@@ -9,16 +85,11 @@ export default function Header(){
                     <p className="text-[#fdc52c]"><strong>BUY</strong></p>
                 </div>
                 <div className="subHeader--right flex items-center justify-evenly gap-[16px] mr-[24px] border-top shadow-2xl">
-                    <div className="flex items-center">
-                        <button className="rounded-full bg-[#154284] mr-[6px]">
-                            <i className="fa-regular fa-user p-[11px] text-white"></i>
-                        </button>
-                        <p className="text-white text-[14px]"><strong><a href="/prelog">Login</a></strong></p>
-                    </div>
-                    <button className="flex items-center px-[8px] mr-[10px] bg-[linear-gradient(90deg,#8c1a17,#cd122d)] text-white p-[4px] my-[4px] rounded-sm">
-                        <img className="pr-[6px]" src="./image/sublogo.png" width="40px"  alt="subLogo"/>
-                        <p className="pr-[8px] text-[14px]"><strong>Register</strong></p>
-                    </button>
+                    
+
+                <BeforeLog />
+
+
                     <div className="flex items-center">
                         <button className="rounded-full bg-[hsla(0,0%,100%,.12)]">
                             <p className="p-[5px] text-white"><strong className="font-bold">EN</strong></p>

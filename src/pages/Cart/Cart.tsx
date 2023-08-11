@@ -1,13 +1,13 @@
-import ContentStore from "../../components/ContentStore/ContentStore";
+import ContentCart from "../../components/ContentCart/ContentCart";
 import FooterStore from "../../components/FooterStore/FooterStore";
 import HeaderStore from "../../components/HeaderStore/HeaderStore";
 
-export default function Store(){
+export default function Cart(){
     return(
-        <>
+        <div>
             <HeaderStore />
-            <ContentStore />
+            <ContentCart />
             <FooterStore />
-        </>
+        </div>
     )
 }

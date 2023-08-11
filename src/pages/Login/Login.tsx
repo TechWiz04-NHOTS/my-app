@@ -13,11 +13,17 @@ export default function Login({emailName}: any){
     }
 
     const handleLogin = () => {
-        if(emailName == "khanhnb.0811@gmail.com" && password == "123456"){
+        if(emailName == "khanhnb@gmail.com" && password == "123"){
             localStorage.setItem("ACCESS_TOKEN", token)
+            window.location.href='/'
+            console.log(emailName)
+            console.log(password);
+            
         } else{
             // notification("Incorrect username or password!")
-            window.location.href='/prelog';
+            console.log("failed")
+            console.log(emailName)
+            console.log(password);
         }
     }
 
@@ -48,7 +54,7 @@ export default function Login({emailName}: any){
                     <p>Your Email:</p>
                     <p>{emailName}</p>
                 </div>
-                <input type="password" className="w-[100%] mt-[12px] py-[10px] text-white rounded-sm pl-[12px] outline-none bg-[#1a243e] border" placeholder="Password" />
+                <input type="password" onChange={(e) => {setPassword(e.target.value)}} className="w-[100%] mt-[12px] py-[10px] text-white rounded-sm pl-[12px] outline-none bg-[#1a243e] border" placeholder="Password" />
                 <p className="text-center font-[100] text-[14px] text-white opacity-[0.6]">
                 By Pressing SIGN UP you accept our  privacy policy  and confirm that you are over 18 years old.
                 </p>
