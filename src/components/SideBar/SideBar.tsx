@@ -31,17 +31,25 @@ const items: MenuProps['items'] = [
   { type: 'divider' },
 
   getItem('Category', 'category', [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
+    getItem('Crest Keyring', '5'),
+    getItem('Striker Sticker', '6'),
+    getItem('Chronograph Watch', '7'),
+    getItem('Wallet', '8'),
+    getItem('Notebook & Pen', '9'),
   ]),
 
   { type: 'divider' },
 
   getItem('Players', 'player', [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
-    getItem('Option 11', '11'),
-    getItem('Option 12', '12'),
+    getItem('Kepa Arrizabalaga', '10'),
+    getItem('Marcus Bettinelli', '11'),
+    getItem('RobertSanchez', '12'),
+    getItem('Lucas Bergstrom', '13'),
+    getItem('Eddie Beach', '14'),
+    getItem('AxelDisasi.webp', '15'),
+    getItem('Marc Cucurella', '16'),
+    getItem('Benoit Badiashile', '17'),
+    getItem('Thiago Emiliano da Silva', '18'),
   ]),
 
   { type: 'divider' },
@@ -104,7 +112,11 @@ const SideBar = ({searches}: any) => {
         <h1>Size: </h1>
         <div className='grid-container'>
             <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>S</p>
+            <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>SM</p>
             <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>M</p>
+            <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>L</p>
+            <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>XL</p>
+            <p onClick={handleGetSize} className='grid-item border text-center cursor-pointer hover:bg-[#000] hover:text-white'>XXL</p>
         </div>
     </div>
     </div>
