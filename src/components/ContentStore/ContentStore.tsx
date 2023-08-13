@@ -3,7 +3,7 @@ import Pagination from "../Pagination/Pagination";
 import SideBar from "../SideBar/SideBar";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 
-export default function ContentStore({searchString}: any){
+export default function ContentStore({searchString, productsData, setProductData}: any){
     const pageNumber = 1;
     return(
         <div>
@@ -16,9 +16,9 @@ export default function ContentStore({searchString}: any){
                             <Pagination />
                         </div>
                         <div className="grid-container pl-[40px]">
-                            <ProductItem />
-                            <ProductItem />
-                            <ProductItem />
+                        {productsData.map((items: any) => (
+                            <ProductItem key={items.id} items={items} />  
+                        ))}   
                         </div>
                     </div>
                 </div>

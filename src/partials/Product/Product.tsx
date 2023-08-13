@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import ProductItem from "../ProductItem/ProductItem";
 
 
+interface ClassProps {
+  productsData: object;
+}
 
-export default class Responsive extends Component {
+
+export default class Responsive extends Component<ClassProps> {
   render() {
+    const {productsData}: any = this.props;
     var settings = {
     //   dots: true,
       infinite: true,
@@ -54,30 +59,9 @@ export default class Responsive extends Component {
             <p className="text-white mt-[14px] hover:border-b cursor-pointer" onClick={goToStore}>ENTER THE STORE</p>
         </div>
         <Slider {...settings}>
-          <div>
-            <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
-          <div>
-          <ProductItem />
-          </div>
+          {productsData.map((items:any) => (
+            <ProductItem items={items} />
+          ))}
         </Slider>
       </div>
       </div>

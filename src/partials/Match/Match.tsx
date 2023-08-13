@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import MatchInfo from "../MatchInfo/MatchInfo";
 
-export default function Match(){
+export default function Match({datas, setDatas}: any){
+
     return(
         <div className="text-black flex justify-between flex-col rounded-xl pt-[24px] bg-white flex-row max-w-[1440px] mx-auto my-0 border-b pb-[40px]">
             <div className="flex flex-row justify-between">
@@ -22,13 +24,15 @@ export default function Match(){
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row gap-[12px] mt-[32px]">
+            <div className="flex flex-row gap-[12px] h-[100%] mt-[32px]">
                 <div className="text-white text-[28px] card flex items-center justify-center w-[352px] h-[305px] background-result ml-[32px]">
                     <p>View all<strong>Results</strong></p>
                 </div>
-                <MatchInfo />
-                <MatchInfo />
-                <MatchInfo />
+                {datas.map((items:any) => {
+                    return(
+                        <MatchInfo items={items} />
+                    )
+                })}
             </div>
         </div>
     )

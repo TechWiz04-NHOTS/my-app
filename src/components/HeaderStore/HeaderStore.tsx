@@ -43,8 +43,8 @@ export default function HeaderStore({searchString, setSearchString}: any){
             </div>
             <div className="flex gap-[40px] items-center py-[32px]">
                 <div className="flex items-center gap-[12px]">
-                    <img src="./image/logo--header.webp" className="w-[100px] ml-[32px]" alt="logo" />
-                    <p className="text-[36px] font-bold tracking-tighter">CHELSEA DIRECT</p>
+                    <a href="/"><img src="./image/logo--header.webp" className="w-[100px] ml-[32px]" alt="logo" /></a>
+                    <p className="text-[36px] font-bold tracking-tighter"><a href="/store">CHELSEA DIRECT</a></p>
                 </div>
                 <div className="relative flex items-center">
                     <input onChange={(e) => {setSearchString(e.target.value)}} className="pl-[14px] w-[500px] outline-none border font-thin py-[8px] text-[14px]" placeholder="Search" />

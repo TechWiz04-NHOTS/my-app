@@ -3,12 +3,12 @@ export default function Card(){
         <div>
             <div className="background-top">
                 <img src="./image/Sport.jpg" className="z-0"/>
-                <p className="text-white absolute z-0 top-[800px] pl-[40px] text-[40px]"><strong className="bg-[rgb(0,0,0,0.5)] p-[4px]">UNITED AND ADIDAS LAUNCH NEW THIRD KIT</strong></p>
+                <p className="text-white absolute z-0 top-[800px] pl-[40px] text-[40px]"><strong className="bg-[rgb(0,0,0,0.5)] p-[4px]">CHELSEA LAUNCH NEW THIRD KIT</strong></p>
             </div>
             <div className="flex flex-col divide pb-[44px]">
             <div className="flex justify-center gap-[12px]">
                 <div className="text-white card flex flex-col items-center justify-center gap-[16px] bg-[#0a0927] my-[60px] w-[18%]">
-                    <img src="./image/blog1.webp" />
+                    <img src="./image/16x9_IV.webp" />
                     <p><strong>HIGHTLIGHTS</strong></p>
                     <div className="flex text-[#b2b7c4] gap-[8px] items-center">
                         <i className="fa-solid fa-play"></i>
@@ -19,52 +19,52 @@ export default function Card(){
                             <i className="fa-solid fa-square-full"></i>
                             <p className="">FIRST TEAM</p>
                         </div>
-                        <p>10 hrs ago</p>
+                        <p>5 hrs ago</p>
                     </div>
                 </div>
                 <div className="text-white card flex flex-col items-center justify-center gap-[16px] bg-[#0a0927] my-[60px] w-[18%]">
-                    <img src="./image/blog1.webp"/>
+                    <img src="./image/230810_MEDIA_DAY_BTS_-_LONG_UNSEEN_STYLE_V2_V3.webp"/>
                     <p><strong>HIGHTLIGHTS</strong></p>
                     <div className="flex text-[#b2b7c4] gap-[8px] items-center">
                         <i className="fa-solid fa-play"></i>
-                        <p>04:26</p>
+                        <p>02:26</p>
                     </div>
                     <div className="flex text-[12px] gap-[26px] items-center pb-[10px]">
                         <div className="flex items-center gap-[8px]">
                             <i className="fa-solid fa-square-full"></i>
                             <p className="">FIRST TEAM</p>
                         </div>
-                        <p>10 hrs ago</p>
+                        <p>1 hrs ago</p>
                     </div>
                 </div>
                 <div className="text-white card flex flex-col items-center justify-center gap-[16px] bg-[#0a0927] my-[60px] w-[18%]">
-                    <img src="./image/blog1.webp"/>
+                    <img src="./image/CFC_TRAINING_THUMBNAIL_16x9_v2.webp"/>
                     <p><strong>HIGHTLIGHTS</strong></p>
                     <div className="flex text-[#b2b7c4] gap-[8px] items-center">
                         <i className="fa-solid fa-play"></i>
-                        <p>04:26</p>
+                        <p>04:42</p>
                     </div>
                     <div className="flex text-[12px] gap-[26px] items-center pb-[10px]">
                         <div className="flex items-center gap-[8px]">
                             <i className="fa-solid fa-square-full"></i>
                             <p className="">FIRST TEAM</p>
                         </div>
-                        <p>10 hrs ago</p>
+                        <p>4 hrs ago</p>
                     </div>
                 </div>
                 <div className="text-white card flex flex-col items-center justify-center gap-[16px] bg-[#0a0927] my-[60px] w-[18%]">
-                    <img src="./image/blog1.webp"/>
+                    <img src="./image/THE_STORY_OF_-_LIVERPOOL_V_CHELSEA_1.webp"/>
                     <p><strong>HIGHTLIGHTS</strong></p>
                     <div className="flex text-[#b2b7c4] gap-[8px] items-center">
                         <i className="fa-solid fa-play"></i>
-                        <p>04:26</p>
+                        <p>07:26</p>
                     </div>
                     <div className="flex text-[12px] gap-[26px] items-center pb-[10px]">
                         <div className="flex items-center gap-[8px]">
                             <i className="fa-solid fa-square-full"></i>
                             <p className="">FIRST TEAM</p>
                         </div>
-                        <p>10 hrs ago</p>
+                        <p>6 hrs ago</p>
                     </div>
                 </div>
               </div>

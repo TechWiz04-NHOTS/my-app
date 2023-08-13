@@ -3,11 +3,11 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { Link, Route, Router, Routes, useNavigate } from "react-router-dom";
 import Login from "../Login/Login";
 
-export default function PreLogin({emailName, setEmailName}: any){
+export default function PreLogin({username, setUsername}: any){
     const navigate = useNavigate();
 
     const handleLogin = () =>{
-        if(emailName != null){
+        if(username != null){
             navigate(('/login'), {replace: true})
         }
     }
@@ -35,7 +35,7 @@ export default function PreLogin({emailName, setEmailName}: any){
                 </div>
                 {/* <div className="h-[1px] w-[100%] bg-[#fff]"></div> */}
                 <p className="text-white bg-[#1a243e] border-b font-bold">Or log in with your email</p>
-                <input type="email" value={emailName} onChange={(e) => setEmailName(e.target.value)} className="w-[100%] py-[10px] text-white rounded-sm pl-[12px] outline-none bg-[#1a243e] border" placeholder="Your email" />
+                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="w-[100%] py-[10px] text-white rounded-sm pl-[12px] outline-none bg-[#1a243e] border" placeholder="Your email" />
                 <button onClick={handleLogin} className="flex flex-row items-center gap-[12px] w-[100%]  justify-center bg-[#cf122d] rounded-sm mt-[16px] py-[12px]">
                         <p className="text-white font-bold">
                             Log in

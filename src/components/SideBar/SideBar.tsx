@@ -89,6 +89,9 @@ const SideBar = ({searches}: any) => {
 
   return (
     <div>
+      <div className='flex flex-col'>
+        <p className='font-semibold text-14px'>Your selections:</p>
+      </div>
         <Menu
       onClick={onClick}
       style={{ width: 256 }}

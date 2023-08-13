@@ -1,30 +1,33 @@
+import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function Login({emailName}: any){
+export default function Login({username}: any){
     const [password, setPassword] = useState('')
-    const token = "ASFASFASFASFASF";
+    const [token, setToken] = useState('')
 
+    const getToken = async (e: any) => {
+        e.preventDefault()
+        const userData={
+            username: username,
+            password: password
+        }
 
+        const response = await axios.post('http://localhost:3000/api/v1/login', userData)
+        .then((res) => {
+            if (res.status == 200){
+                setToken(res.data.accessToken)
+                localStorage.setItem("ACCESS_TOKEN", token)
+            }
+        }).catch((err) => {
+            console.log(err)
+            console.log(userData)
+        })
+    }
 
     const localToken = localStorage.getItem("ACCESS_TOKEN")
     if(localToken != null){
         window.location.href='/';
-    }
-
-    const handleLogin = () => {
-        if(emailName == "khanhnb@gmail.com" && password == "123"){
-            localStorage.setItem("ACCESS_TOKEN", token)
-            window.location.href='/'
-            console.log(emailName)
-            console.log(password);
-            
-        } else{
-            // notification("Incorrect username or password!")
-            console.log("failed")
-            console.log(emailName)
-            console.log(password);
-        }
     }
 
     const handleBack = () =>{
@@ -52,13 +55,13 @@ export default function Login({emailName}: any){
                 <p className="text-[#fdc52c] text-center font-semi text-[32px]"><i>Set up your password</i></p>
                 <div className="flex flex-col text-white gap-[12px]">
                     <p>Your Email:</p>
-                    <p>{emailName}</p>
+                    <p>{username}</p>
                 </div>
                 <input type="password" onChange={(e) => {setPassword(e.target.value)}} className="w-[100%] mt-[12px] py-[10px] text-white rounded-sm pl-[12px] outline-none bg-[#1a243e] border" placeholder="Password" />
                 <p className="text-center font-[100] text-[14px] text-white opacity-[0.6]">
                 By Pressing SIGN UP you accept our  privacy policy  and confirm that you are over 18 years old.
                 </p>
-                <button onClick={handleLogin} className="flex flex-row items-center gap-[12px] w-[100%]  justify-center bg-[#cf122d] rounded-sm py-[12px]">
+                <button onClick={getToken} className="flex flex-row items-center gap-[12px] w-[100%]  justify-center bg-[#cf122d] rounded-sm py-[12px]">
                         <p className="text-white font-bold">
                             Log in
                         </p>

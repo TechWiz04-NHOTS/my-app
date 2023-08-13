@@ -10,9 +10,9 @@ export default function Header(){
         }
     }
 
-    // const goToStore = () => {
-    //     window.location.href='/'
-    // }
+    const goToStore = () => {
+        window.location.href='/store'
+    }
 
     const items: MenuProps['items'] = [
         {
@@ -117,7 +117,7 @@ export default function Header(){
                     <i className="fa-solid fa-ticket-simple"></i>
                     <p><strong>TICKETS & MUSEUM</strong></p>
                 </div>
-                <div className="flex items-center text-[14px] text-[#fdc52c] gap-[6px]">
+                <div onClick={goToStore} className="cursor-pointer flex items-center text-[14px] text-[#fdc52c] gap-[6px]">
                     <i className="fa-solid fa-shirt"></i>
                     <p><strong>SHOP</strong></p>
                 </div>

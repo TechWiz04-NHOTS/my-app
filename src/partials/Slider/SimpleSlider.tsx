@@ -3,8 +3,13 @@ import Slider from "react-slick";
 import News from "../News/News";
 import { FaArrowRight } from 'react-icons/fa';
 
-export default class SimpleSlider extends Component {
+interface ClassProps {
+  newsData: object;
+}
+
+export default class SimpleSlider extends Component<ClassProps> {
   render() {
+    const {newsData}: any = this.props;
     const settings = {
       // dots: true,
       infinite: true,
@@ -21,24 +26,9 @@ export default class SimpleSlider extends Component {
             <p className="text-[32px] flex items-center gap-[12px] my-[32px] text-[#001489]">Latest News <FaArrowRight /></p>
         </div>
         <Slider {...settings}>
-          <div>
-            <News />
-          </div>
-          <div>
-            <News />
-          </div>
-          <div>
-            <News />
-          </div>
-          <div>
-            <News />
-          </div>
-          <div>
-            <News />
-          </div>
-          <div>
-            <News />
-          </div>
+        {newsData.map((items:any) => (
+            <News items={items} />
+          ))}
         </Slider>
       </div>
     );
